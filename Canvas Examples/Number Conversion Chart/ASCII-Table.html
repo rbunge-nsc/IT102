@@ -1,0 +1,41 @@
+<!-- JavaScript6A: ASCII Table -->
+
+<!-- The prompt() commands asks for the number of rows in a 3 column ASCII table-->
+<!-- The for loop makes the table-->
+
+<html>
+<head>
+<title>ASCII TABLE</title>
+</head>
+<body>
+
+<p id = "theTableHere"></p>
+
+<script language="JavaScript">
+
+//declare variables
+var max =-1;
+var row = 0;
+var col = 0;
+var theTable = "";
+
+//get the number of rows &
+//check for correct data entry
+while( max<0 ){
+   max = prompt("Enter a whole number greater than 0.","");
+}
+
+//build the table
+theTable += "_______</br>";
+for (row = 0; row < max; row++) {
+   theTable += "| * " + "| * " + "| * |</br>";
+}
+theTable += "-----------</br>";
+
+//print the output
+document.getElementById("theTableHere").innerHTML = theTable;
+
+</script>
+
+</body>
+</html>

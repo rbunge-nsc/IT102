@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Art Square Demo</h2>
+
+
+
+<p id="artspace"></p>
+
+<script language="JavaScript">
+
+var theArt ="";
+ 
+ for (row = 0; row <10; row++){
+    theArt+="</br>";
+    for (column = 0; column < 10; column++) {
+      // if (row > 0 && row < 9) {
+          if (column==0 || column ==9){
+              (theArt += "*");
+          }
+          else{
+            (theArt += " &nbsp");
+          }
+      // }
+     //  else {theArt += "*";}    
+   }
+ }
+
+document.getElementById("artspace").innerHTML=(theArt);
+
+</script>
+
+</body>
+</html> 

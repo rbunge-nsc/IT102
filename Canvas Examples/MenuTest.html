@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Which technology to you use to create action for a menu choice?</p>
+
+<p>Select a technology from the menu.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="CSS">CSS
+  <option value="HTML">HTML
+  <option value="JavaScript">JavaScript
+  <option value="none of these">none of these
+</select>
+
+<p id="answer"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    if (x == "JavaScript"){
+        x += ", and that's correct!";
+    }
+    else{
+        x += ". Sorry, please try again.";
+    }
+    document.getElementById("answer").innerHTML = "You selected: " + x;
+}
+</script>
+
+</body>
+</html>

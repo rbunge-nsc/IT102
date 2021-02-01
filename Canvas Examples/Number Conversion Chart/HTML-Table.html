@@ -1,0 +1,50 @@
+<!-- JavaScript6B: HMTL Table -->
+
+<!-- The prompt() commands asks for the number of rows in a 3 column HTML table-->
+<!-- The for loop makes the table-->
+
+<html>
+<head>
+<title>HTML TABLE</title>
+</head>
+<body>
+
+<p id = "theTableHere"></p>
+
+<script language="JavaScript">
+
+//declare variables
+var max =-1;
+var row = 0;
+var col = 0;
+var theTable = "";
+
+//get the number of rows &
+//check for correct data entry
+while( max<0 ){
+   max = prompt("Enter a whole number greater than 0.","");
+}
+
+//build the table
+//declare the table, build the header row
+theTable += "<table border = '1'>"
+theTable += "<tr><th>header 1</th>"
+theTable += "<th>header 2</th>"
+theTable += "<th>header 3</th><tr>"
+;
+
+//make table rows
+for (row = 0; row < max; row++) {
+   theTable += "<tr><td>*</td><td>*</td><td>*</td></tr>";
+}
+
+//end the table
+theTable += "</table>";
+
+//print the output
+document.getElementById("theTableHere").innerHTML = theTable;
+
+</script>
+
+</body>
+</html>

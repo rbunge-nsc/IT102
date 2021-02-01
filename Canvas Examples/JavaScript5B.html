@@ -1,0 +1,35 @@
+<!-- JavaScript5B: Using a Form -->
+
+<!-- For this verision of the form script, instead of document.write() -->
+<!-- we use document.getElementById('idname').innerHTML= -->
+<!-- This puts the output into an HTML element placed on the page for this purpose -->
+<!-- In this case we set up a pair of paragraph tags to display the output -->
+
+<html>
+<head>
+
+<title>JavaScript Test 5</title>
+
+<script language="JavaScript">
+function reveal(){
+   var magic = document.theForm.elements[0].value;
+   document.getElementById("outputHere").innerHTML=("It's ..." + magic + "!!");
+}
+</script>
+</head>
+
+<body>
+
+<form name="theForm">
+What's the magic word?
+<input type="text">
+<input type="button" value="Submit" onClick="reveal()">
+</form>
+
+<p id="outputHere">User input will appear here as output.</p>
+
+<h2>The Code:</h2>
+<img src = "js5b.PNG" width = "550px" height="700px">
+
+</body>
+</html>

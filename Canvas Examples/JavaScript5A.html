@@ -1,0 +1,40 @@
+<!-- JavaScript5A: Using a Form -->
+
+<!-- This time, a HTML form is in the <body> -->
+<!-- The form gathers user input with a textfield and a button -->
+<!-- On submit, the button calls a JavaScript function: reveal() -->
+<!-- The varable "magic" is used as in JavaScript 4 -->
+<!-- This time, the JavaScript is placed in the <head> section -->
+<!-- The magic word is written to the document -->
+
+<html>
+
+<head>
+
+<title>JavaScript Test 5</title>
+
+<script language="JavaScript">
+function reveal(){
+var magic = document.theForm.elements[0].value
+document.write("It's ..." + magic + "!!")
+}
+</script>
+
+</head>
+
+<body>
+
+<form name="theForm">
+What's the magic word?
+<input type="text">
+<input type="button" value="Submit" onClick="reveal()">
+</form>
+
+<h2>The Code:</h2>
+<img src = "js5a.PNG" width = "550px" height="700px">
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!-- JavaScript6D: getBinary Function -->
+
+<!-- getHex converts decimal to binary in a range up to 15-->
+
+<html>
+<head>
+<title>GetBinary Function</title>
+</head>
+<body>
+
+<p id = "theTableHere"></p>
+
+<script language="JavaScript">
+
+//declare variables
+var theTable = "";
+var decimal = -1;
+var binaryNumber = "test";
+
+//get the number to convert &
+//check for correct data entry
+while( decimal < 0 || decimal > 15){
+   decimal = prompt("Enter a whole number from 0 to 15.","");
+}
+
+//the function divides by "casting out" each binary place value.
+//if a place value like 8, 4, 2, or 1 goes into the quoteint,
+//the place value is binary "1" and the place value subtracts from
+//the quotient. Otherwise, the place value is binary "0".
+
+function getBinary(decimal){
+var quotient = decimal;
+var _8sPlace = "";
+var _4sPlace = "";
+var _2sPlace = "";
+var _1sPlace = "";
+
+if (quotient/8 >=1)
+{ _8sPlace = "1";
+quotient = quotient - 8;
+}
+else { _8sPlace = "0";}
+
+if (quotient/4 >=1)
+{ _4sPlace = "1";
+quotient = quotient - 4;
+}
+else { _4sPlace = "0";}
+
+if (quotient/2 >=1)
+{ _2sPlace = "1";
+quotient = quotient - 2;
+}
+else { _2sPlace = "0";}
+
+if (quotient==1)
+{ _1sPlace = "1";}
+else { _1sPlace = "0";}
+
+binaryNumber =  _8sPlace+ _4sPlace+ _2sPlace+ _1sPlace
+
+return binaryNumber;
+}
+
+getBinary(decimal);
+
+theTable+= "For decimal number: " + decimal;
+theTable+= ", the binary equivelent is: " + binaryNumber;
+
+
+//print the output
+document.getElementById("theTableHere").innerHTML = theTable;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- JavaScript6C: getHex Function -->
+
+<!-- getHex converts decimal to hex in a range up to 15-->
+
+<html>
+<head>
+<title>GetBinary Function</title>
+</head>
+<body>
+
+<p id = "theTableHere"></p>
+
+<script language="JavaScript">
+
+//declare variables
+var theTable = "";
+var decimal = -1;
+var hexNumber = "";
+
+//get the number to convert &
+//check for correct data entry
+while( decimal < 0 || decimal > 15){
+   decimal = prompt("Enter a whole number from 0 to 15.","");
+}
+
+function getHex(decimal){
+   
+switch (decimal) {
+   case "10" :
+   hexNumber = "A";
+   break;
+   case "11" :
+   hexNumber = "B";
+   break;
+   case "12" :
+   hexNumber = "C";
+   break;
+   case "13" :
+   hexNumber = "D";
+   break;
+   case "14" :
+   hexNumber = "E";
+   break;
+   case "15" :
+   hexNumber = "F";
+   break;
+   default:
+   hexNumber = decimal;
+ }
+
+return hexNumber;
+}
+
+getHex(decimal);
+
+theTable+= "For decimal number: " + decimal;
+theTable+= ", the hex equivelent is: " + hexNumber;
+
+
+//print the output
+document.getElementById("theTableHere").innerHTML = theTable;
+
+</script>
+
+</body>
+</html>
