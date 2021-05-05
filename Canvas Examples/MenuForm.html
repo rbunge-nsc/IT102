@@ -1,0 +1,63 @@
+<!-- JavaScript6: Using Form with Functions -->
+
+<!-- For this verision of the form script, instead of document.write() -->
+
+
+<html>
+<head>
+
+<title>Form with Multiple Inputs</title>
+
+<script language="JavaScript">  
+    
+function showOuput(){ 
+//declare variables and get the input
+var output=""; 
+var firstVar = document.theForm.elements[0].value;
+var secondVar = document.theForm.elements[1].value;
+var thirdVar = document.theForm.elements[2].value;
+
+//answer questions about the input
+output += "The first thing is: \"" + firstVar + "\" and";
+if(secondVar == thirdVar){output+= " the other two are equal to each other.";}
+else{output+= " the other two are not equal to each other.";}
+    
+//publish the output   
+   document.getElementById("outputHere").innerHTML=output;    
+}
+
+</script>
+</head>
+
+<body>
+    
+<form name="theForm">
+
+
+ First Question<br/>
+<select>
+  <option id="firstQuestion" value="yes">Yes</option>
+  <option value="no">No</option>
+</select>
+   <br/><br/>
+ Second Question<br/>
+<select>
+  <option id="secondQuestion" value="yes">Yes</option>
+  <option value="no">No</option>
+</select>
+    <br/><br/>
+ Third Question<br/>
+<select>
+  <option id="thirdQuestion" value="yes">Yes</option>
+  <option value="no">No</option>
+</select>
+  <br/><br/>
+<input type="button" value="Show" onclick="showOuput()">
+
+
+</form>
+
+<p id="outputHere">User input will appear here as output.</p>
+
+</body>
+</html>
