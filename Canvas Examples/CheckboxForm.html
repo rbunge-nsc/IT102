@@ -1,0 +1,57 @@
+<!-- JavaScript6: Using Form with Functions -->
+
+<!-- For this verision of the form script, instead of document.write() -->
+
+
+<html>
+<head>
+
+<title>Form with Checkbox Inputs</title>
+
+<script language="JavaScript">  
+    
+function showOuput(){ 
+//declare variables and get the input
+var output=""; 
+var firstVar = document.getElementById("question1");
+    if(question1.checked==true){firstVar = "yes";}
+    else{firstVar = "no";}
+var secondVar = document.getElementById("question2");
+    if(question2.checked==true){secondVar = "yes";}
+    else{secondVar = "no";}
+var thirdVar = document.getElementById("question3");
+    if(question3.checked==true){thirdVar = "yes";}
+    else{thirdVar = "no";}
+
+//answer questions about the input
+output += "The first thing is: \"" + firstVar + "\" and";
+if(secondVar == thirdVar){output+= " the other two are equal to each other.";}
+else{output+= " the other two are not equal to each other.";}
+    
+//publish the output   
+   document.getElementById("outputHere").innerHTML=output;    
+}
+
+</script>
+</head>
+
+<body>
+    
+<form name="theForm">
+
+<input type="checkbox" id="question1" name="question1" value="yes">
+  <label for="question1"> Yes to Question 1?</label><br>
+  <input type="checkbox" id="question2" name="question2" value="yes">
+  <label for="question2"> Yes to Question 2?</label><br>
+  <input type="checkbox" id="question3" name="question3" value="yes">
+  <label for="question3"> Yes to Question 3?t</label><br><br>
+    
+<input type="button" value="Show" onclick="showOuput()">
+
+
+</form>
+
+<p id="outputHere">User input will appear here as output.</p>
+
+</body>
+</html>
